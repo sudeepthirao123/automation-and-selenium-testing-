@@ -1,136 +1,108 @@
-# Automated Testing & Data Validation Framework
+# 🧪 Automated Testing & Data Validation Framework
 
-## 📌 Project Overview
-
-The Automated Testing & Data Validation Framework is designed to ensure application reliability by combining UI automation testing with backend data validation.  
-
-This framework helps detect UI defects, data inconsistencies, and integration issues early in the development cycle, improving overall software quality and reducing manual testing effort.
+A scalable automation framework built using Python and Selenium to perform UI testing and backend data validation with CI/CD integration.
 
 ---
 
-## 🚀 Key Features
+## 📌 Overview
 
-### 1️⃣ UI Automation Testing
-- Built using Selenium WebDriver
-- Automates critical user workflows (e.g., login, form submission, navigation)
-- Cross-browser testing support
-- Reusable test components using Page Object Model (POM)
-- Detailed test reports for execution results
+This framework automates end-to-end UI workflows and validates application data against backend databases. It follows best practices such as Page Object Model (POM), modular design, and CI/CD integration to ensure maintainability and scalability.
 
-### 2️⃣ Data Validation & Backend Testing
-- Validates application data against database records
-- Ensures data consistency between frontend and backend
-- Automated SQL query validation
-- Detects mismatches and logs discrepancies
+---
 
-### 3️⃣ CI/CD Integration
-- Integrated with Jenkins for automated test execution
-- Supports pipeline-based deployment testing
-- Enables continuous validation during development cycles
+## 🚀 Features
+
+- ✅ UI Automation using Selenium WebDriver  
+- ✅ Page Object Model (POM) design pattern  
+- ✅ Database validation using SQL queries  
+- ✅ PyTest-based test execution  
+- ✅ Logging and reporting support  
+- ✅ Jenkins CI/CD integration  
+- ✅ Reusable utility modules  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python
-- Selenium WebDriver
-- PyTest / Unittest
-- SQL (Database Validation)
-- Jenkins (CI/CD)
-- Git (Version Control)
+- Python 3.x  
+- Selenium WebDriver  
+- PyTest  
+- SQL  
+- Jenkins  
+- Git  
 
 ---
-
-## 📂 Project Structure
-
-automated_testing_framework/
+automated-testing-framework/
 │
-├── tests/
-│   ├── test_login.py
-│   ├── test_dashboard.py
+├── tests/ # Test cases
+│ ├── test_login.py
+│ ├── test_dashboard.py
 │
-├── pages/
-│   ├── login_page.py
-│   ├── dashboard_page.py
+├── pages/ # Page Object classes
+│ ├── login_page.py
+│ ├── dashboard_page.py
 │
-├── validation/
-│   ├── data_validation.py
+├── validation/ # Data validation scripts
+│ └── data_validation.py
 │
-├── utils/
-│   ├── config.py
-│   ├── db_connection.py
+├── utils/ # Utility modules
+│ ├── config.py
+│ ├── db_connection.py
+│ └── logger.py
 │
-├── reports/
+├── reports/ # Generated test reports
 │
-├── requirements.txt
+├── requirements.txt # Project dependencies
+├── pytest.ini # PyTest configuration
 └── README.md
 
 ---
 
 ## ⚙️ Installation & Setup
 
-1. Clone the repository:
-   git clone <repository_url>
+### 1️⃣ Clone the Repository
 
-2. Navigate to the project directory:
-   cd automated_testing_framework
+```bash
+git clone https://github.com/your-username/automated-testing-framework.git
+cd automated-testing-framework
+Create Virtual Environment
+python -m venv venv
 
-3. Create virtual environment (recommended):
-   python -m venv venv
 
-4. Activate virtual environment:
-   Windows:
-   venv\Scripts\activate
+Activate virtual environment:
 
-   Mac/Linux:
-   source venv/bin/activate
+Windows
 
-5. Install dependencies:
-   pip install -r requirements.txt
+venv\Scripts\activate
 
----
 
-## ▶️ Running Tests
+Mac/Linux
 
-### Run UI Tests
-python -m pytest tests/
+source venv/bin/activate
 
-### Run Specific Test
-python tests/test_login.py
+3️⃣ Install Dependencies
+pip install -r requirements.txt
 
-### Run Data Validation Script
+▶️ Running Tests
+Run All Tests
+pytest
+
+Run Specific Test File
+pytest tests/test_login.py
+
+Run with Detailed Report
+pytest -v --html=reports/report.html
+
+🔍 Running Data Validation
 python validation/data_validation.py
 
----
+📊 CI/CD Integration
 
-## 📊 Reporting
+Integrated with Jenkins pipeline
 
-- Generates execution logs
-- Test results summary
-- Jenkins pipeline build reports
-- Failure screenshots (if configured)
+Automated test execution on every build
 
----
+Generates execution reports and logs
 
-## 🎯 Benefits
+## 📁 Project Structure
 
-- Reduces manual testing effort
-- Improves test coverage
-- Ensures data integrity
-- Enables continuous quality validation
-- Scalable and maintainable framework structure
-
----
-
-## 📌 Future Enhancements
-
-- Allure reporting integration
-- Docker containerization
-- Parallel test execution
-- API automation integration
-
----
-
-## 👩‍💻 Author
-
-Developed as part of an automation and quality engineering initiative to enhance application reliability and testing efficiency.
